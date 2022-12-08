@@ -1,9 +1,9 @@
-import { Router } from "express";
+import { Router } from 'express'
 import si from 'systeminformation'
 
 const router = Router()
 
-router.get('/', async (req, res) => {
+router.get('/', async (_req, res) => {
   const date = new Date()
 
   const cpu = await si.cpu()

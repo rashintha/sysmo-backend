@@ -1,4 +1,4 @@
-import { Router } from "express";
+import { Router } from 'express'
 import core from './../core/router/router.js'
 
 const router = Router()

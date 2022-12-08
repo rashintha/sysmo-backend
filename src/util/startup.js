@@ -1,4 +1,4 @@
-import compression from "compression"
+import compression from 'compression'
 
 export const shouldCompress = (req, res) => {
   // Stop compression if x-no-compression request header is present
