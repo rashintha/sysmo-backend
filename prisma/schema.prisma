@@ -1,0 +1,21 @@
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  email     String   @unique
+  password  String   @unique
+  createdAt DateTime @default(now())
+  status    Status   @default(Active)
+}
+
+enum Status {
+  Active  @map("1")
+  Deleted @map("100")
+}
