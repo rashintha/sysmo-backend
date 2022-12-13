@@ -1,8 +1,8 @@
 import { Router } from 'express'
-import core from './controllers/core.controller.js'
+import { get } from './controllers/core.controller.js'
 
 const router = Router()
 
-router.use('/', core)
+router.get('/', get)
 
 export default router

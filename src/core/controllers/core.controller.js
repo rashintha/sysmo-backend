@@ -1,9 +1,6 @@
-import { Router } from 'express'
 import si from 'systeminformation'
 
-const router = Router()
-
-router.get('/', async (_req, res) => {
+export const get = async (_req, res) => {
   const date = new Date()
 
   const cpu = await si.cpu()
@@ -15,6 +12,4 @@ router.get('/', async (_req, res) => {
     timestamp: Date.now(),
     time: date.toISOString()
   })
-})
-
-export default router
+}
